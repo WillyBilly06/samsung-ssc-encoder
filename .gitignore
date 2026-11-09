@@ -1,0 +1,30 @@
+# build output
+build/
+out/
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.exe
+*.pdb
+*.ilk
+
+# test data and encoder output (not part of the repository)
+*.ssc
+*.s16le
+*.s24le
+*.raw
+*.wav
+test_data/
+
+# editors
+.vscode/
+.idea/
+*.swp
+__pycache__/
+
+# bundled test inputs and Samsung reference frames
+!tests/vectors/*.s16le
+!tests/vectors/ref_frames/*.ssc
