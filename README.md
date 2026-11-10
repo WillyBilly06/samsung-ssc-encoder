@@ -1,4 +1,6 @@
-# samsung-ssc-encoder
+# Samsung Scalable Codec (SSC) & Samsung Seamless Codec Encoder in C
+
+**Open-source encoder for the Bluetooth codec behind Galaxy Buds (SSC, Seamless HiFi, UHQ).** Companion decoder and ESP32 speaker firmware: [samsung-ssc-decoder](https://github.com/WillyBilly06/samsung-ssc-decoder).
 
 An open-source encoder for the **Samsung Scalable Codec**, also called the **Samsung Seamless Codec (SSC)**.
 SSC is the Bluetooth **A2DP** vendor codec (vendor ID `0x00000075`, codec ID `0x0103`) that Samsung Galaxy
@@ -8,8 +10,6 @@ phones use with **Galaxy Buds**. It covers the plain SSC mode (44.1/48 kHz, 16-b
 The library is portable C99. It writes complete SSC frames: the 4-byte header (sync, sequence number, bitrate
 code, end-band side information) and the range-coded payload. The frame sizes, headers and end bands are the
 same as Samsung's encoder produces, at every bitrate and mode Samsung uses.
-
-Companion project: [samsung-ssc-decoder](https://github.com/WillyBilly06/samsung-ssc-decoder) (decoder, ESP32 speaker firmware, bitstream docs).
 
 This is a **clean reimplementation for interoperability**. It contains no Samsung code and no Samsung
 binaries. SSC is a fork of the CELT layer of Opus 1.1. This encoder adapts the BSD-licensed Opus 1.1 CELT
